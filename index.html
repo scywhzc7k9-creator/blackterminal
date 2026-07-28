@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laboratorio educativo de programación, redes, servidores y análisis de vulnerabilidades con estética hacker.">
+<meta name="theme-color" content="#081722">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<title>UBAM // NODO — Laboratorio de Redes, Servidores y Vulnerabilidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ================= WELCOME MODAL ================= -->
+<div class="modal-overlay" id="welcomeModal">
+  <div class="modal-box">
+    <div class="modal-top">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="title">boot_sequence.sh — UBAM_NODO</div>
+      <div style="width:40px;"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-logo-row">
+        <img src="assets/images/ubam-logo.png" alt="UBAM">
+      </div>
+      <div class="boot-line">&gt; iniciando entorno académico<span class="ok"> [OK]</span></div>
+      <div class="boot-line">&gt; verificando distribución<span class="ok"> Kali Linux detectado [OK]</span></div>
+      <div class="boot-line">&gt; cargando módulos: redes · servidores · vulnerabilidades<span class="ok"> [OK]</span></div>
+      <h2>Bienvenido a <span class="accent">NODO</span> — Laboratorio UBAM</h2>
+      <p class="modal-desc">
+        Este sitio acompaña la carrera de Ingeniería en Programación de la Universidad Bancaria de México.
+        Aquí encontrarás fundamentos, redes, administración de servidores y análisis de vulnerabilidades,
+        con retos prácticos diseñados para ejecutarse en <strong>Kali Linux</strong>. Todo el contenido es
+        estrictamente educativo y debe usarse solo en entornos autorizados de laboratorio.
+      </p>
+      <div class="modal-actions">
+        <button class="btn-access" id="enterBtn">Acceder al sistema →</button>
+      </div>
+      <div class="modal-cred">
+        <img src="assets/images/valset-logo.jpg" alt="Valset">
+        <span>Plataforma desarrollada por VALSET · Uso académico exclusivo</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site">
+  <div class="brand">
+    <img src="assets/images/ubam-logo.png" alt="UBAM">
+    <div class="divider"></div>
+    <span class="tag">Nodo // Ing. en Programación</span>
+  </div>
+  <nav class="site">
+    <a href="#generales">Generales</a>
+    <a href="#redes">Redes</a>
+    <a href="#servidores">Servidores</a>
+    <a href="#vulnerabilidades">Vulnerabilidades</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="dot"></span> Entorno de laboratorio · Kali Linux</div>
+    <h1>Piensa como <span>atacante</span>,<br>construye como <span>ingeniero</span>.</h1>
+    <p class="lead">
+      Un espacio de práctica para estudiantes de Ingeniería en Programación de la UBAM.
+      Explora redes, servidores y vulnerabilidades a través de terminales simuladas y
+      misiones guiadas, antes de llevarlo a tu propia máquina Kali.
+    </p>
+    <div class="hero-cta">
+      <a href="#generales" class="btn btn-primary">Comenzar módulo 01</a>
+      <a href="#vulnerabilidades" class="btn btn-ghost">Ver todos los módulos</a>
+    </div>
+    <div class="boot-term">
+      <div class="bar"><span></span><span></span><span></span></div>
+      <pre id="heroBoot"><span class="cmt">-- inicializando nodo académico --</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRESS RAIL ================= -->
+<div class="rail">
+  <div class="rail-inner" id="railInner">
+    <a href="#generales" class="rail-step" data-section="generales"><span class="num">01</span> Generales</a>
+    <div class="rail-sep"></div>
+    <a href="#redes" class="rail-step" data-section="redes"><span class="num">02</span> Redes</a>
+    <div class="rail-sep"></div>
+    <a href="#servidores" class="rail-step" data-section="servidores"><span class="num">03</span> Servidores</a>
+    <div class="rail-sep"></div>
+    <a href="#vulnerabilidades" class="rail-step" data-section="vulnerabilidades"><span class="num">04</span> Vulnerabilidades</a>
+  </div>
+</div>
+
+<!-- ================= MODULE 01: GENERALES ================= -->
+<section class="module" id="generales">
+  <div class="module-inner">
+    <div>
+      <div class="module-head"><span class="badge">01</span> Módulo · Fundamentos</div>
+      <h2>Temas generales del hacking ético</h2>
+      <p class="desc">
+        Antes de tocar una terminal real, todo el equipo necesita el mismo mapa mental:
+        vocabulario, marco legal y metodología. Este módulo sienta las bases que vas a usar
+        en cada laboratorio siguiente.
+      </p>
+      <ul class="topic-list">
+        <li>Diferencia entre hacking ético, pentesting y ciberdelito</li>
+        <li>Marco legal y alcance autorizado (reglas de compromiso)</li>
+        <li>Metodología: reconocimiento, enumeración, explotación, reporte</li>
+        <li>Anatomía de Kali Linux: repositorios, herramientas y flujo de trabajo</li>
+        <li>Buenas prácticas de documentación y bitácora técnica</li>
+      </ul>
+      <div class="env-note">⌘ Requiere: Kali Linux actualizado · terminal con privilegios de usuario estándar</div>
+    </div>
+    <div>
+      <div class="terminal" data-terminal="generales">
+        <div class="tbar"><div class="dots"><span></span><span></span><span></span></div><div class="path">~/nodo/modulo-01-generales</div></div>
+        <div class="tscreen" id="screen-generales"></div>
+        <div class="tform">
+          <span class="prompt">$</span>
+          <input type="text" id="input-generales" placeholder="escribe 'help' para comenzar…" autocomplete="off">
+          <button onclick="runCmd('generales')">Ejecutar</button>
+        </div>
+      </div>
+      <div class="hint-row">
+        <span class="hint-chip" onclick="fillCmd('generales','help')">help</span>
+        <span class="hint-chip" onclick="fillCmd('generales','whoami')">whoami</span>
+        <span class="hint-chip" onclick="fillCmd('generales','mision')">mision</span>
+      </div>
+      <div class="mission-status" id="status-generales"><span class="pip"></span> Misión pendiente: identifica tu rol con <span class="mono">whoami</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODULE 02: REDES ================= -->
+<section class="module alt" id="redes">
+  <div class="module-inner">
+    <div>
+      <div class="module-head"><span class="badge">02</span> Módulo · Redes</div>
+      <h2>Redes: el terreno que vas a mapear</h2>
+      <p class="desc">
+        Ningún ataque ni defensa tiene sentido sin entender el terreno. Aquí practicas cómo
+        se ve una red desde la terminal antes de correr herramientas reales como Nmap.
+      </p>
+      <ul class="topic-list">
+        <li>Modelo TCP/IP y direccionamiento IPv4/IPv6</li>
+        <li>Subredes, máscaras y tablas de enrutamiento</li>
+        <li>Escaneo de puertos y descubrimiento de hosts (concepto Nmap)</li>
+        <li>Sniffing de tráfico y análisis con Wireshark</li>
+        <li>Segmentación, VLANs y firewalls perimetrales</li>
+      </ul>
+      <div class="env-note">⌘ Herramientas reales: <span class="mono">nmap</span>, <span class="mono">wireshark</span>, <span class="mono">netdiscover</span></div>
+    </div>
+    <div>
+      <div class="terminal" data-terminal="redes">
+        <div class="tbar"><div class="dots"><span></span><span></span><span></span></div><div class="path">~/nodo/modulo-02-redes</div></div>
+        <div class="tscreen" id="screen-redes"></div>
+        <div class="tform">
+          <span class="prompt">$</span>
+          <input type="text" id="input-redes" placeholder="escribe 'help' para comenzar…" autocomplete="off">
+          <button onclick="runCmd('redes')">Ejecutar</button>
+        </div>
+      </div>
+      <div class="hint-row">
+        <span class="hint-chip" onclick="fillCmd('redes','help')">help</span>
+        <span class="hint-chip" onclick="fillCmd('redes','scan 192.168.1.0/24')">scan 192.168.1.0/24</span>
+        <span class="hint-chip" onclick="fillCmd('redes','mision')">mision</span>
+      </div>
+      <div class="mission-status" id="status-redes"><span class="pip"></span> Misión pendiente: escanea la subred con <span class="mono">scan 192.168.1.0/24</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODULE 03: SERVIDORES ================= -->
+<section class="module" id="servidores">
+  <div class="module-inner">
+    <div>
+      <div class="module-head"><span class="badge">03</span> Módulo · Servidores</div>
+      <h2>Servidores: administrar antes de asegurar</h2>
+      <p class="desc">
+        Para encontrar una mala configuración primero hay que saber cómo se ve una buena.
+        Este módulo simula la administración básica de un servidor Linux expuesto a la red.
+      </p>
+      <ul class="topic-list">
+        <li>Servicios comunes: SSH, HTTP/HTTPS, FTP, bases de datos</li>
+        <li>Gestión de usuarios, permisos y sudoers</li>
+        <li>Hardening básico: cierre de puertos y servicios innecesarios</li>
+        <li>Logs y monitoreo de accesos sospechosos</li>
+        <li>Contenedores y virtualización como entorno de práctica seguro</li>
+      </ul>
+      <div class="env-note">⌘ Herramientas reales: <span class="mono">systemctl</span>, <span class="mono">ufw</span>, <span class="mono">journalctl</span></div>
+    </div>
+    <div>
+      <div class="terminal" data-terminal="servidores">
+        <div class="tbar"><div class="dots"><span></span><span></span><span></span></div><div class="path">~/nodo/modulo-03-servidores</div></div>
+        <div class="tscreen" id="screen-servidores"></div>
+        <div class="tform">
+          <span class="prompt">$</span>
+          <input type="text" id="input-servidores" placeholder="escribe 'help' para comenzar…" autocomplete="off">
+          <button onclick="runCmd('servidores')">Ejecutar</button>
+        </div>
+      </div>
+      <div class="hint-row">
+        <span class="hint-chip" onclick="fillCmd('servidores','help')">help</span>
+        <span class="hint-chip" onclick="fillCmd('servidores','services')">services</span>
+        <span class="hint-chip" onclick="fillCmd('servidores','mision')">mision</span>
+      </div>
+      <div class="mission-status" id="status-servidores"><span class="pip"></span> Misión pendiente: cierra el servicio inseguro con <span class="mono">harden ftp</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODULE 04: VULNERABILIDADES ================= -->
+<section class="module alt" id="vulnerabilidades">
+  <div class="module-inner">
+    <div>
+      <div class="module-head"><span class="badge">04</span> Módulo · Vulnerabilidades</div>
+      <h2>Vulnerabilidades: de la teoría al reporte</h2>
+      <p class="desc">
+        Cerramos el ciclo: identificar, explotar de forma controlada y reportar. Esta es la
+        misión más cercana a un pentest real, pensada como puente directo a tu Kali Linux.
+      </p>
+      <ul class="topic-list">
+        <li>OWASP Top 10 y CVEs: cómo se clasifican las fallas</li>
+        <li>Enumeración de versiones y bases de datos de exploits</li>
+        <li>Inyecciones (SQLi), XSS y fallas de configuración</li>
+        <li>Explotación controlada en entornos como Metasploitable/DVWA</li>
+        <li>Redacción de un informe de hallazgos y remediación</li>
+      </ul>
+      <div class="env-note">⌘ Herramientas reales: <span class="mono">nikto</span>, <span class="mono">sqlmap</span>, <span class="mono">metasploit</span> (solo en laboratorio autorizado)</div>
+    </div>
+    <div>
+      <div class="terminal" data-terminal="vulnerabilidades">
+        <div class="tbar"><div class="dots"><span></span><span></span><span></span></div><div class="path">~/nodo/modulo-04-vulnerabilidades</div></div>
+        <div class="tscreen" id="screen-vulnerabilidades"></div>
+        <div class="tform">
+          <span class="prompt">$</span>
+          <input type="text" id="input-vulnerabilidades" placeholder="escribe 'help' para comenzar…" autocomplete="off">
+          <button onclick="runCmd('vulnerabilidades')">Ejecutar</button>
+        </div>
+      </div>
+      <div class="hint-row">
+        <span class="hint-chip" onclick="fillCmd('vulnerabilidades','help')">help</span>
+        <span class="hint-chip" onclick="fillCmd('vulnerabilidades','audit 10.0.0.5')">audit 10.0.0.5</span>
+        <span class="hint-chip" onclick="fillCmd('vulnerabilidades','mision')">mision</span>
+      </div>
+      <div class="mission-status" id="status-vulnerabilidades"><span class="pip"></span> Misión pendiente: audita el host con <span class="mono">audit 10.0.0.5</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="footer-inner">
+    <img src="assets/images/valset-logo.jpg" alt="Valset">
+    <div class="fnote">© 2026 VALSET. Plataforma desarrollada para la Universidad Bancaria de México (UBAM). Todos los derechos reservados.</div>
+    <div class="fnote" style="color:#4C5B65;">Contenido con fines exclusivamente educativos. Prohibido el uso de estas técnicas fuera de entornos de laboratorio autorizados.</div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
