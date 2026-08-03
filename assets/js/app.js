@@ -7,7 +7,7 @@ document.getElementById('enterBtn').addEventListener('click', function(){
 (function(){
   const el = document.getElementById('heroBoot');
   const lines = [
-    "root@ubam:~$ conectando nodo académico...",
+    "root@nodo:~$ conectando nodo académico...",
     "cargando módulos: generales · redes · servidores · vulnerabilidades",
     "entorno recomendado: Kali Linux",
     "escribe en cualquier terminal de abajo: help"
@@ -53,7 +53,7 @@ const missions = {
 const responses = {
   generales: {
     help: ["Comandos disponibles:", "  whoami        - muestra tu rol en el laboratorio", "  reglas        - muestra las reglas de compromiso", "  mision        - describe el objetivo de este módulo", "  clear         - limpia la pantalla"],
-    whoami: ["usuario: estudiante-ubam", "rol: pentester en entrenamiento", "alcance: solo entornos autorizados de laboratorio"],
+    whoami: ["usuario: trainee", "rol: pentester en entrenamiento", "alcance: solo entornos autorizados de laboratorio"],
     reglas: ["1. Nunca pruebes técnicas fuera de un entorno autorizado.", "2. Documenta cada paso como si fuera un reporte real.", "3. El objetivo es aprender a defender, no a dañar."],
     mision: ["Objetivo: identifica tu rol dentro del laboratorio.", "Pista: usa el comando 'whoami'."]
   },
